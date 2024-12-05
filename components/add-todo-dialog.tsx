@@ -19,6 +19,8 @@ import {
 import { format } from 'date-fns';
 import { Calendar as CalendarIcon, Plus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTodoStore } from '@/lib/store';
+import { todo } from 'node:test';
 
 interface AddTodoDialogProps {
   onAdd: (text: string, dueDate: string) => void;
@@ -29,7 +31,7 @@ export function AddTodoDialog({ onAdd }: AddTodoDialogProps) {
   const [text, setText] = useState('');
   const [date, setDate] = useState<Date>(new Date());
   const [calendarOpen, setCalendarOpen] = useState(false);
-
+  const { todos } = useTodoStore();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (text.trim()) {
@@ -47,13 +49,18 @@ export function AddTodoDialog({ onAdd }: AddTodoDialogProps) {
           size="icon"
           className="fixed bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
         > */}
+        {/* <div className={todos}> */}
+
+
         <Button
           size="icon"
-          className="sticky bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
+          // className={todos.length > 6 ? "" : "sticky bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"}
+        className="sticky bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
         >
 
           <Plus className="h-6 w-6" />
         </Button>
+        {/* </div> */}
       </DialogTrigger>
       {/* <DialogContent className="max-w-[90%] rounded-2xl"> */}
       <DialogContent className="w-full max-w-xs mx-auto rounded-2xl overflow-hidden">

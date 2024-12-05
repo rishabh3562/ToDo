@@ -116,7 +116,7 @@ interface TaskListProps {
 function TaskList({ title, tasks, onToggle, onDelete, onEdit }: TaskListProps) {
   if (tasks.length === 0) {
     return (
-      <Card>
+      <Card >
         <CardContent className="py-8 text-center text-muted-foreground ">
           No tasks to show.
         </CardContent>

@@ -14,8 +14,8 @@ export default function Home() {
 
   return (
     <PhoneFrame>
-      <main className="h-full bg-offwhite">
-        <header className="sticky rounded-b-2xl   top-0 z-50 backdrop-blur-lg bg-background/80 border-b">
+      <main className="h-full bg-offwhite relative ">
+        <header className="sticky rounded-b-2x border-2 border-red-900  top-0 z-50 backdrop-blur-lg bg-background/80 border-b">
           <div className="px-4 pb-3 pt-6" >
             <div className="flex items-center gap-2 mb-4">
               <CheckSquare className="h-6 w-6 text-primary" />
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="px-4 py-6">
+        <div className="px-4 py-6  border-2  h-full">
           <TaskSections
             todos={todos}
             selectedDate={selectedDate}
@@ -36,6 +36,7 @@ export default function Home() {
             onDelete={deleteTodo}
             onEdit={editTodo}
           />
+        
         </div>
 
         <AddTodoDialog onAdd={addTodo} />
