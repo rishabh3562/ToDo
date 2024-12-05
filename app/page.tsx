@@ -14,9 +14,9 @@ export default function Home() {
 
   return (
     <PhoneFrame>
-      <main className="h-full">
-        <header className="sticky top-0 z-50 backdrop-blur-lg bg-background/80 border-b">
-          <div className="px-4 py-3">
+      <main className="h-full bg-offwhite">
+        <header className="sticky rounded-b-2xl   top-0 z-50 backdrop-blur-lg bg-background/80 border-b">
+          <div className="px-4 pb-3 pt-6" >
             <div className="flex items-center gap-2 mb-4">
               <CheckSquare className="h-6 w-6 text-primary" />
               <h1 className="text-xl font-bold">Tasks</h1>

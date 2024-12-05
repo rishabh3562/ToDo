@@ -66,7 +66,7 @@ export function TodoList({ todos, onToggle, onDelete, onEdit }: TodoListProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 ">
       {Object.entries(groupedTodos).map(([date, todos]) => (
         <Card key={date}>
           <CardHeader>

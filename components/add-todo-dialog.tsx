@@ -49,7 +49,7 @@ export function AddTodoDialog({ onAdd }: AddTodoDialogProps) {
         > */}
         <Button
           size="icon"
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
+          className="sticky bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
         >
 
           <Plus className="h-6 w-6" />

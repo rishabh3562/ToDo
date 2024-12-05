@@ -60,7 +60,7 @@ export function TaskSections({
 
   return (
     <Tabs defaultValue="today" className="w-full">
-      <TabsList className="grid w-full grid-cols-3 mb-6">
+      {/* <TabsList className="grid w-full grid-cols-3 mb-6">
         <TabsTrigger value="today">
           Today ({todayTasks.length})
         </TabsTrigger>
@@ -70,7 +70,7 @@ export function TaskSections({
         <TabsTrigger value="completed">
           Done ({completedTasks.length})
         </TabsTrigger>
-      </TabsList>
+      </TabsList> */}
 
       <TabsContent value="today">
         <TaskList
@@ -82,7 +82,7 @@ export function TaskSections({
         />
       </TabsContent>
 
-      <TabsContent value="remaining">
+      {/* <TabsContent value="remaining">
         <TaskList
           title="Remaining Tasks"
           tasks={remainingTasks}
@@ -100,7 +100,7 @@ export function TaskSections({
           onDelete={onDelete}
           onEdit={onEdit}
         />
-      </TabsContent>
+      </TabsContent> */}
     </Tabs>
   );
 }
@@ -117,7 +117,7 @@ function TaskList({ title, tasks, onToggle, onDelete, onEdit }: TaskListProps) {
   if (tasks.length === 0) {
     return (
       <Card>
-        <CardContent className="py-8 text-center text-muted-foreground">
+        <CardContent className="py-8 text-center text-muted-foreground ">
           No tasks to show.
         </CardContent>
       </Card>
