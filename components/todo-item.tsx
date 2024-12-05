@@ -119,7 +119,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
               Due: {formatDueDate(todo.dueDate)}
             </span>
           </div>
-          <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="flex gap-1 opacity-80 group-hover:opacity-100 transition-opacity">
             <Button
               size="icon"
               variant="ghost"
