@@ -43,14 +43,21 @@ export function AddTodoDialog({ onAdd }: AddTodoDialogProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button
+        {/* <Button
           size="icon"
           className="fixed bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
+        > */}
+        <Button
+          size="icon"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 h-14 w-14 rounded-full shadow-lg animate-bounce-slow"
         >
+
           <Plus className="h-6 w-6" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[90%] rounded-2xl">
+      {/* <DialogContent className="max-w-[90%] rounded-2xl"> */}
+      <DialogContent className="w-full max-w-xs mx-auto rounded-2xl overflow-hidden">
+
         <DialogHeader>
           <DialogTitle>New Task</DialogTitle>
         </DialogHeader>
