@@ -6,10 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Next.js To-Do App | Manage Tasks Effectively',
   description: 'A mobile-friendly To-Do App for managing daily tasks.',
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
+  icons: '/favicon.ico',
   openGraph: {
     type: 'website',
     url: 'https://neumotask.vercel.app',
